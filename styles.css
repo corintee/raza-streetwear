@@ -1,3 +1,4 @@
+
 /* ==========================================
    RESET & BASE STYLES
 ========================================== */
@@ -20,7 +21,7 @@ body {
 
 
 /* ==========================================
-   NAVIGATION BAR
+   NAVIGATION BAR — LOGO UPDATED
 ========================================== */
 .navbar {
     position: fixed;
@@ -40,22 +41,25 @@ body {
 .logo {
     display: flex;
     align-items: center;
-    gap: 0.75rem; /* Space between logo image and text */
+    gap: 0.75rem;
     text-decoration: none;
+    flex-shrink: 0;
 }
 
 .logo-image {
-    max-height: 40px;
+    height: 40px;
     width: auto;
+    max-width: 100px;
     display: block;
     object-fit: contain;
 }
 
 .logo-text {
-    color: #ff3333; /* Red color for RAZA text */
+    color: #ff3333;
     font-size: 1.25rem;
     font-weight: 900;
     letter-spacing: 2px;
+    white-space: nowrap;
 }
 
 .nav-links {
@@ -87,7 +91,7 @@ body {
     justify-content: center;
     text-align: center;
     padding: 0 1rem;
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('Images/Hero.jpeg') no-repeat center center/cover;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('images/Hero.jpeg') no-repeat center center/cover;
 }
 
 .hero-content {
@@ -325,12 +329,15 @@ body {
     .story {
         grid-template-columns: 1fr;
     }
+
     .story-content h2 {
         text-align: center;
     }
+
     .story-content p {
         text-align: center;
     }
+
     .story-content {
         display: flex;
         flex-direction: column;

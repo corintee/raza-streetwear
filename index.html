@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,8 +11,8 @@
 
     <link rel="stylesheet" href="styles.css">
 
-    <!-- Website tab icon (favicon) -->
-    <link rel="icon" href="Images/raza-logo.png" type="image/png">
+    <!-- Website tab icon (JPEG logo) -->
+    <link rel="icon" href="images/raza-logo.jpeg" type="image/jpeg">
 </head>
 
 <body>
@@ -19,7 +20,7 @@
     <!-- NAVIGATION BAR -->
     <header class="navbar">
         <a href="#home" class="logo">
-            <img src="Images/raza-logo.png" alt="Raza Streetwear Logo" class="logo-image">
+            <img src="images/raza-logo.jpeg" alt="Raza Streetwear Logo" class="logo-image">
             <span class="logo-text">RAZA</span>
         </a>
 
@@ -82,7 +83,7 @@
 
             <!-- SHIRT -->
             <article class="collection-card">
-                <img src="Products/shirt.jpeg"
+                <img src="products/shirt.jpeg"
                      alt="Raza Streetwear shirt"
                      loading="lazy">
 
@@ -107,7 +108,7 @@
 
             <!-- HAT -->
             <article class="collection-card">
-                <img src="Products/hat.jpeg"
+                <img src="products/hat.jpeg"
                      alt="Raza Streetwear hat"
                      loading="lazy">
 
@@ -132,7 +133,7 @@
 
             <!-- HOODIE -->
             <article class="collection-card">
-                <img src="Products/hoodie.jpeg"
+                <img src="products/hoodie.jpeg"
                      alt="Raza Streetwear hoodie"
                      loading="lazy">
 
@@ -246,11 +247,11 @@
     <!-- EMAIL COLLECTION POPUP MODAL -->
     <div id="email-modal" class="modal-overlay">
         <div class="modal-content">
-            <button id="close-modal" class="close-btn">&times;</button>
+            <button id="close-modal" class="close-btn" type="button" aria-label="Close popup">&times;</button>
             <p class="eyebrow">RAZA STREETWEAR</p>
             <h2>JOIN THE VIP LIST</h2>
             <p>Enter your email to get early access to new drops and exclusive streetwear updates.</p>
-            
+
             <form action="https://formspree.io/f/xvkzrqjk" method="POST" class="email-form">
                 <input type="email" name="email" placeholder="Enter your email address..." required>
                 <button type="submit" class="btn btn-primary">UNLOCK ACCESS</button>
@@ -264,7 +265,8 @@
         window.addEventListener('load', () => {
             setTimeout(() => {
                 const modal = document.getElementById('email-modal');
-                if (!sessionStorage.getItem('modalClosed')) {
+
+                if (modal && !sessionStorage.getItem('modalClosed')) {
                     modal.style.display = 'flex';
                 }
             }, 2000);
